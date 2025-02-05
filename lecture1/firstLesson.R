@@ -28,3 +28,6 @@ ls()
 
 # Clean all the object from the environment
 rm(list = ls())
+
+# Get the documentation for a function
+?factor
