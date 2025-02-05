@@ -23,7 +23,7 @@ setwd(paste0(getwd(), "/lecture1"))
 # Create File in cwd (current working directory)
 file.create("filename")
 
-# get all the object in our environment
+# list all the object in our environment
 ls()
 
 # Clean all the object from the environment
