@@ -4,6 +4,6 @@ This repository contains all the source codes from the lectures related to the p
 You will also find all the project submitted for it's validation.
 
 ## Project list
-- **Representing data**
-    - [**pitstop**](pitstop): Exercice to analyse some data on formula one's pitstop.
-    - [**big5**](big5): Small exercice to classify the degree of certain personnality traits from the data of a poll.
+- [**Representing data**](representing_data)
+    - [**pitstop**](representing_data/pitstop): Exercice to analyse some data on formula one's pitstop.
+    - [**big5**](representing_data/big5): Small exercice to classify the degree of certain personnality traits from the data of a poll.
