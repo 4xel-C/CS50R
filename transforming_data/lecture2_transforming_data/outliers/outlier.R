@@ -22,7 +22,7 @@ all(temps < 0 | temps > 60)
 # Give the boolean mask:
 temps < 0 | temps > 60
 
-# Get the temeprature validating the logical expression
+# Get the temperature validating the logical expression
 temps[which(temps < 0 | temps > 60)]
 
 # filtering values

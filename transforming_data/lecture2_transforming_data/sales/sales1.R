@@ -12,8 +12,8 @@ Q3$quarter <-  "Q3"
 Q4 <- read.csv("Q4.csv")
 Q4$quarter <-  "Q4"
 
-# add new row to the dataframes Q1 (columns must the same
-# In other words: concatenantall the dfs
+# add new row to the dataframes Q1 (columns must be the same)
+# In other words: concatenate all the dfs
 df = rbind(Q1, Q2, Q3, Q4)
 
 View(df)
