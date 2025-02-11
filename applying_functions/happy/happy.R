@@ -16,7 +16,7 @@ for (file in file_names) {
   } else {
 
     # get the calculation for the desired country
-    df_filtered <-df[df$country == country, ]
+    df_filtered <- df[df$country == country, ]
     score <- round(apply(df_filtered[, -1], MARGIN = 1, FUN = sum), 2)
 
     # print the result
@@ -24,5 +24,3 @@ for (file in file_names) {
   }
 
 }
-
-
