@@ -11,3 +11,5 @@ You will also find all the project submitted for it's validation.
     - [**librarian**](transforming_data/librarian): Exercice to manipulate filtering using data frames and CSV data on books and authors.
     - [**Teahouse**](transforming_data/teahouse): Exercice to manipulate matrix with a small application to prompt user of a beverage menu choice.
     - [**Ontime**](transforming_data/ontime): Manipulation of dataframe and basic vectorial operations to answer a prompt user over the reliability of a subway/bus route.
+- [**Applyting functions**](applying_functions)
+    - [**carpet**](applying_functions/carpet): Function manipulation to predict the number of visitor in an airport using a calculated growth_rate.

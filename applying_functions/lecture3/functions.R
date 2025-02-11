@@ -23,6 +23,6 @@ mario <- get_votes()
 peach <- get_votes()
 bowser <- get_votes()
 
-total <- smu(mario, peach, bowser)
+total <- sum(mario, peach, bowser)
 
 cat("Total votes", total)
