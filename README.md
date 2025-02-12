@@ -15,3 +15,5 @@ You will also find all the project submitted for it's validation.
     - [**Carpet**](applying_functions/carpet): Function manipulation to predict the number of visitor in an airport using a calculated growth_rate.
     - [**Happy**](applying_functions/happy): loops manipulation to request multiple CSV file to compute "happyness" score of multiple countries over the years.
     - [**Variations**](applying_functions/variaitons): while loop to print 20 random characters on the screen and delaying each print by 0.25 sec. 
+- [**Tidying data**](tidying_data/)
+    -
