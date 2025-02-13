@@ -1,4 +1,5 @@
 # Read CSV
+# Use read_csv() method to directly load a tibble from the tidyverse library
 students <- read.csv("students.csv")
 View(students)
 
