@@ -1,16 +1,37 @@
-# Create a blank visualization
+<!-- 
+markdown R tutorial:
+Used to create a report containing R code
+toc: table of content
+-->
 
+---
+title: "Votes Analysis"
+author: "Axel C."
+output: 
+    "html_document":
+        toc: true
+---
+
+# CS50R
+
+## Data visualizing
+
+### Loading library
+
+```{r}
+library(ggplot2)
+```
+
+### Loading the Data
+
+
+```{r}
 votes <- read.csv("votes.csv")
+```
 
-votes
-
-# Draw the graph
-    # ggplot => create the blank plot
-    # aes (for aesthetic) use to change the aesthetic and map the columns to the axis
-    # Scales: 
-        # continuous: have limits
-        # discretes (categorical)
-plot <- ggplot(votes, aes(x = candidate, y = votes)) +
+### Displaying data
+```{r, echo=FALSE}
+ggplot(votes, aes(x = candidate, y = votes)) +
     geom_col(
         aes(fill = candidate),
         show.legend = FALSE  # Hide the legend of color's columns
@@ -23,13 +44,8 @@ plot <- ggplot(votes, aes(x = candidate, y = votes)) +
         title = "Election Results"
     ) + 
     theme_classic()  # define the theme (global aestitics), by convention at the end
+```
 
-# saving the plot as a file
-ggsave(
-    "votes.png",
-    plot = plot,
-    width = 1200,
-    height = 900,
-    units = "px"
-)
-
+### Conclusion
+In the end, Mario received `r votes$votes[1]` votes.
+The total number of votes was `r sum(votes$votes)`
