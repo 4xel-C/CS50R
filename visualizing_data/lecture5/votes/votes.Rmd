@@ -1,0 +1,51 @@
+<!-- 
+markdown R tutorial:
+Used to create a report containing R code
+toc: table of content
+-->
+
+---
+title: "Votes Analysis"
+author: "Axel C."
+output: 
+    "html_document":
+        toc: true
+---
+
+# CS50R
+
+## Data visualizing
+
+### Loading library
+
+```{r}
+library(ggplot2)
+```
+
+### Loading the Data
+
+
+```{r}
+votes <- read.csv("votes.csv")
+```
+
+### Displaying data
+```{r, echo=FALSE}
+ggplot(votes, aes(x = candidate, y = votes)) +
+    geom_col(
+        aes(fill = candidate),
+        show.legend = FALSE  # Hide the legend of color's columns
+        ) +  # define the type of visualization (columns)
+    scale_fill_viridis_d() +  # modify the scale fill to other color
+    scale_y_continuous(limits = c(0, 250)) +  # limit vector: c(start, ends)
+    labs(   # Labelization of the graph
+        x = "Candidate",
+        y = "Votes",
+        title = "Election Results"
+    ) + 
+    theme_classic()  # define the theme (global aestitics), by convention at the end
+```
+
+### Conclusion
+In the end, Mario received `r votes$votes[1]` votes.
+The total number of votes was `r sum(votes$votes)`
