@@ -17,3 +17,4 @@ You will also find all the project submitted for it's validation.
     - [**Variations**](applying_functions/variaitons): while loop to print 20 random characters on the screen and delaying each print by 0.25 sec. 
 - [**Tidying data**](tidying_data/)
     -[**Air**](tidying_data/air/): Exercice project using group by functionnalities with aggregation.
+    -[**Zelda**](tidying_data/zelda/): Exercices on pip operator, group by, filtration, and summmarize to get various informations on Zelda games.
