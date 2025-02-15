@@ -17,6 +17,7 @@ You will also find all the project submitted for it's validation.
     - [**Variations**](applying_functions/variaitons): while loop to print 20 random characters on the screen and delaying each print by 0.25 sec. 
 - [**Tidying data**](tidying_data/)
     -[**Air**](tidying_data/air/): Exercice project using group by functionnalities with aggregation.
-    -[**Zelda**](tidying_data/zelda/): Exercice project to show some statistics concerning zelda games
+    -[**Zelda**](tidying_data/zelda/): Exercice project to show some statistics concerning zelda games using pipe operator.
 - [**Visualizing data**](visualizing_data/)
-    -[**Parked**](visualizing_data/): R program to parse a text file containing songs' lyrics and display their frequency in a bar plot.
+    -[**Parked**](visualizing_data/parked): R program to parse a text file containing songs' lyrics and display their frequency in a bar plot.
+    -[**EDA**](visualizing_data/eda): R program to visualize mean length duration of films over the year using Netflix database.
