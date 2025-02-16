@@ -19,9 +19,3 @@ zelda <-zelda |>
 colnames(zelda) <- tolower(colnames(zelda))
 
 save(zelda, file = "zelda.RData")
-
-
-
-
-
-
