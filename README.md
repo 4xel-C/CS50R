@@ -20,3 +20,5 @@ You will also find all the project submitted for it's validation.
     -[**Zelda**](tidying_data/zelda/): Exercice project to show some statistics concerning zelda games
 - [**Visualizing data**](visualizing_data/)
     -[**Parked**](visualizing_data/): R program to parse a text file containing songs' lyrics and display their frequency in a bar plot.
+- [**Packaging programs**](packaging_programs/)
+    -[**Parked**](visualizing_data/): 
