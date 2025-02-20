@@ -32,21 +32,34 @@ Package to help the creation of packages in R alongside with unit testing:
 - `use_test`: Testing file for functions.
 - `test`: Running the unit tests.
 
-### Installation:
-- `install.packages(devtools)`
-- `library(devtools)`
+### Installation and initialization
+- Installation:
+    - `install.packages(devtools)`
+    - `library(devtools)`
 
-### use_testhat()
-Using this function will create a new testing folder and will updates the suggested packages in the description file.
+- `use_testhat()`: Using this function will create a new testing folder and will updates the suggested packages in the description file.
 
-### use_test("test_name")
-Will create in the tests/testthat folder a new file for the unit testing.
+- ``use_test("test_name")``: will create in the tests/testthat folder a new file for the unit testing.
 
-### use_r("filename")
-Will create a folder R and a .R file to create the functions. This functions should hen be declared in the NAMESPACE file to be usable using the package. 
+- ``use_r("filename")``: Will create a folder R and a .R file to create the functions. This functions should hen be declared in the NAMESPACE file to be usable using the package. 
 
-### load_all():
-Load all the functions declared in the NAMESPACE file to be available for use.
+- ``load_all()``: Load all the functions declared in the NAMESPACE file to be available for use.
 
-### test():
-Used to run the tests define in testthat folder with the loaded functions.
+- ``test()``: Used to run the tests define in testthat folder with the loaded functions.
+
+### Manual
+Folder 'man' (short for manual) will store all the .Rd files that will display helpers on specific functions for the user.
+- Each .Rd files (R Documentation) will have the *same name* of the corresponding function it will document.
+- This files recieve particular parameters:
+    - ``\title{...}``           => Title of the documentation
+    - ``\description{...}``     => Description of the function
+    - ``\usage{...}``           => How the function should be used
+    ...
+
+### Building the package
+Converting the source code packages into a single package file.
+- ``build():`` build the package.
+
+### Install packages
+Possibility to install packages from individual file shared by users. (not only by the CRAN).
+- by using `install.pakcages("package.tar.gz")`
