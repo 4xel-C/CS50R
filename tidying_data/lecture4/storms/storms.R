@@ -49,7 +49,6 @@ hurricanes |>
     write.csv("hurricanes.csv", row.names = FALSE)
 
 
-
 # Get the strongest hurricanes from each year using group_by function
 hurricanes <- read.csv("hurricanes.csv")
 

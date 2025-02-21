@@ -23,4 +23,4 @@ df$conscientiousness <- round((df$C1 + df$C2 + df$C3) / 15, 2)
 df$openness <- round((df$O1 + df$O2 + df$O3) / 15, 2)
 
 # Write a newfile containing he csv file
-write.csv(df, "analysis.csv", row.names=FALSE)
+write.csv(df, "analysis.csv", row.names = FALSE)
