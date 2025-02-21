@@ -1,0 +1,9 @@
+Package: cparser
+Tittle: Chemical Parser
+Description: A set of tools to parse data related to chemicals.
+Version: 1.0
+Authors@R: person("Axel", "Cano", email = "4xel@live.fr", role = c("aut", "cre", "cph"))
+License: MIT + file LICENSE
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
