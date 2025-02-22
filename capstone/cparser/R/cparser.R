@@ -2,9 +2,26 @@ parse_integer <- function(vec){
     parsed <- suppressWarnings(as.integer(gsub("[^0-9]", "", vec)))
 }
 
-parse_float <- function(vec){
-    parsed <- suppressWarnings(as.numeric(gsub("[^0-9]", "", vec)))
-}
+
+# -----------------------------------------------------------------To implement!!!
+# parse_float <- function(vec){
+#     parsed <- sapply(vec, function(x) {
+
+#     })
+#     match <- regexpr("\\d+(?:[.,]\\d+)?", vec)
+#     parsed <- regmatches(vec, match)
+
+#     if (length(parsed) == 0) {
+#         return(NA)
+#     }
+    
+#     # transform the extraction into a float after transforming the comma into a point
+#     parsed <- as.numeric(sub(",", ".", parsed))
+
+#     parsed <- ifelse(vec != )
+
+#     return(parsed)
+# }
 
 check_valid_formula <- function(formula){
     pattern <- "^([A-Z][a-z]*[1-9]*)+$"
@@ -60,3 +77,35 @@ compare_formula <- function(formula1, formula2){
     }
     return(FALSE)
 }
+
+is_peroxydes <- function(smiles){
+    grepl("OO", smiles)
+}
+
+estimate_explosivity <- function(formula) {
+    atoms <- parse_formula(formula)
+
+    # get the number of Oxygen
+    O <- atoms["O"]
+
+    # get the number of Carbons
+    C <- atoms["C"]
+
+    return(ifelse(C > 0, O / C, NA))
+}
+
+
+
+
+
+
+match <- regexpr("\\d+(?:[.,]\\d+)?", c("xcwv", "xcwv", "xwcv", "3"))
+parsed <- regmatches(c("xcwv", "xcwv", "xwcv", "3"), match)
+as.numeric(parsed)
+
+
+match <- regexpr("\\d+(?:[.,]\\d+)?", "test")
+regmatches("test", match)
+
+# transform the extraction into a float after transforming the comma into a point
+parsed <- as.numeric(sub(",", ".", parsed))
