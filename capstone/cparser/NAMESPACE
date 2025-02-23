@@ -1,0 +1,11 @@
+# import tidyverse for chemistry.R file
+import(tidyverse)
+
+# exporing core function
+export(parse_formula)
+export(parse_integer)
+export(parse_float)
+export(check_valid_formula)
+export(compare_formula)
+export(estimate_explosivity)
+export(calculate_molw)

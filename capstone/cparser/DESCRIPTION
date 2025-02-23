@@ -1,6 +1,6 @@
 Package: cparser
 Tittle: Chemical Parser
-Description: A set of tools to parse data related to chemicals.
+Description: cparser is a set of tools designed to help chemist work with chemical formula in data set.
 Version: 1.0
 Authors@R: person("Axel", "Cano", email = "4xel@live.fr", role = c("aut", "cre", "cph"))
 License: MIT + file LICENSE

@@ -1,31 +1,8 @@
-parse_integer <- function(vec){
-    parsed <- suppressWarnings(as.integer(gsub("[^0-9]", "", vec)))
-}
-
-
-parse_float <- function(vec){
-    parsed <- sapply(vec, function(x) {
-
-        # RegEx for floats
-        match <- regexpr("\\d+(?:[.,]\\d+)?", x)
-        num <- regmatches(x, match)
-
-        if (length(num) == 0) {
-            return(NA)
-        }
-
-        return(num)
-    })
-   
-    # transform the extraction into a float after transforming the comma into a point
-    parsed <- as.numeric(sub(",", ".", parsed))
-
-
-    return(parsed)
-}
-
 check_valid_formula <- function(formula){
     pattern <- "^([A-Z][a-z]?[1-9]*)+$"
+
+    # Get rid of the trailling white spaces
+    formula <- trimws(formula)
 
     if (grepl(pattern, formula)) {
         return(TRUE)
@@ -72,12 +49,11 @@ parse_formula <- function(formula) {
     }
     return(atoms)
 }
-parse_formula("H2O")
 
 
 compare_formula <- function(formula1, formula2){
-    atoms1 <- parse_formula(formula1)
-    atoms2 <- parse_formula(formula2)
+    atoms1 <- cparser::parse_formula(formula1)
+    atoms2 <- cparser::parse_formula(formula2)
 
     if (all(is.na(atoms1)) || all(is.na(atoms2))) {
         return(FALSE)
@@ -87,23 +63,4 @@ compare_formula <- function(formula1, formula2){
         return(TRUE)
     }
     return(FALSE)
-}
-
-
-estimate_explosivity <- function(formula) {
-    atoms <- parse_formula(formula)
-
-    if(atoms["O"] == 0 || atoms["C"] == 0 || is.na(atoms["O"]) || is.na(atoms["C"])){
-        warning("There is no carbon nor oxygen")
-        return(NA)
-    }
-
-    # get the number of Oxygen
-    O <- atoms[["O"]]
-
-    # get the number of Carbons
-    C <- atoms[["C"]]
-
-
-    return(O / C)
 }
