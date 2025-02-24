@@ -3,8 +3,7 @@ import(tidyverse)
 
 # exporing core function
 export(parse_formula)
-export(parse_integer)
-export(parse_float)
+export(parse_number)
 export(check_valid_formula)
 export(compare_formula)
 export(estimate_explosivity)

@@ -1,9 +1,4 @@
-parse_integer <- function(vec){
-    parsed <- suppressWarnings(as.integer(gsub("[^0-9]", "", vec)))
-}
-
-
-parse_float <- function(vec){
+parse_number <- function(vec){
     parsed <- sapply(vec, function(x) {
 
         # RegEx for floats
@@ -22,3 +17,4 @@ parse_float <- function(vec){
 
     return(parsed)
 }
+

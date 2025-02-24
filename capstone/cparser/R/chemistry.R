@@ -5,7 +5,7 @@ elements <- read_csv("data/elements.csv") |>
     select(Symbol, AtomicMass)
 
 estimate_explosivity <- function(formula) {
-    atoms <- cparser::parse_formula(formula)
+    atoms <- parse_formula(formula)
 
     if(atoms["O"] == 0 || atoms["C"] == 0 || is.na(atoms["O"]) || is.na(atoms["C"])){
         warning("There is no carbon nor oxygen")
@@ -24,7 +24,7 @@ estimate_explosivity <- function(formula) {
 
 calculate_molw <- function(formula) {
     
-    atoms <- cparser::parse_formula(formula)
+    atoms <- parse_formula(formula)
 
     if (all(is.na(atoms))){
         warning("Invalid formula")

@@ -18,8 +18,8 @@ This package will also provide numerical parser, trying to bring quick solution 
 ## Files and functionnalities
 ### numeric_parser.R:
 Numeric parser give 2 functions to facilitate the analysis of numerical values:
-- `parse_integer` will recieve a vector of supposedly integer values and will clean them up and change their type to make sure the vector will contains only integer of NA values.
-- `parse_float` will work the same as parse_integer, but with floats! It also take into consideration number separator, like "," or "." to display the correct float number as an actual numerical value.
+- `parse_number` will recieve a vector of supposedly integer or float values and will clean them up and change their type to make sure the vector will contains only numerical or NA values.
+
 
 ### formula_parser.R:
 This file contains 3 functions to work with chemical formulas:
